@@ -4,7 +4,7 @@ services:
         documentation: Taken from https://hub.docker.com/_/postgres
         image: postgres:$$cap_postgres_version
         volumes:
-            - $$cap_appname-data:/var/lib/postgresql/data
+            - $$cap_appname-postgres-data:/var/lib/postgresql/data
         restart: always
         environment:
             POSTGRES_USER: $$cap_db_user
