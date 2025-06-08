@@ -87,6 +87,12 @@ caproverOneClickApp:
           defaultValue: $$cap_gen_random_hex(32)
           description: Password for the database user and root using postgres.
           validRegex: /.{1,}/
+        - id: $$cap_pg_initdb_args
+          label: Optional Arguments
+          description: >-
+              Arguments will be appended to `postgres initdb`.
+              Example: `--data-checksums`.
+          validRegex: /.{0,}/
         - id: $$cap_admin_user
           label: admin name
           defaultValue: admin
